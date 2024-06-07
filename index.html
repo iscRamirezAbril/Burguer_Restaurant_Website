@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Burger's Jr. - Super delicious Burgers in town!</title>
 
@@ -15,7 +17,16 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Rubik:wght@400;500;600;700&family=Shadows+Into+Light&display=swap" rel="stylesheet">  
+
+    <!-------------------------------------
+              Pre-load images
+    ------------------------------------->
+    <link rel="preload" as="image" href="./assets/images/hero-banner.png" media="min-width(768px)">
+    <link rel="preload" as="image" href="./assets/images/hero-banner-bg.png" media="min-width(768px)">
+    <link rel="preload" as="image" href="./assets/images/hero-bg.jpg">
+
 </head>
+
 <body>
     <!-------------------------------------
                     Header
@@ -88,6 +99,38 @@
         <button class="search-close-btn" aria-label="Cancel search" data-search-close-btn></button>
 
     </div>
+
+    <!-------------------------------------
+                    Hero
+    ------------------------------------->
+    <main>
+        <article>
+
+            <section class="hero" id="home" style="background-image: url('./assets/images/hero-bg.jpg');">
+                <div class="container">
+
+                    <div class="hero-content">
+                        <p class="hero-subtitle"> Eat Sleep And </p>
+                        <h2 class="h1 hero-title"> Super delicious Burgers in town! </h2>
+                        <p class="hero-text">
+                            Food is any substance consumed to provide nutritional support for an organism. 
+                        </p>
+
+                        <button class="btn btn-hover"> Order Now </button>
+                    </div>
+
+                    <figure class="hero-banner">
+                        <img src="./assets/images/hero-banner-bg.png" width="820" height="716" loading="lazy" alt="" class="w-100 hero-img-big">
+                        
+                        <img src="./assets/images/hero-banner.png" width="700" height="637" loading="lazy" alt="Burger" class="w-100 hero-img">
+                    </figure>
+
+                </div>
+            </section>
+
+        </article>
+    </main>
+
     <!-- Custom JS reference file -->
     <script src="./assets/js/script.js" defere></script>
 
