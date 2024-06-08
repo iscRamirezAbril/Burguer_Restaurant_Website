@@ -304,6 +304,20 @@ body.active { overflow: hidden; }
   color: var(--deep-saffron);
 }
 
+.logo-img {
+  display: flex;
+  align-items: start;
+  max-width: max-content;
+  width: 45px;
+  height: 45px;
+  margin-inline: auto;
+}
+
+.logo-section {
+  display: flex;
+  gap: 15px;
+}
+
 .header-btn-group {
   display: flex;
   align-items: center;
