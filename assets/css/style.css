@@ -858,6 +858,26 @@ body.active { overflow: hidden; }
 .banner-card .btn:is(:hover, :focus) { background-color: var(--rich-black-fogra-29); }
 
 /*-----------------------------------*\
+                Rewards
+\*-----------------------------------*/
+.rewards-content { margin-block-end: 40px; }
+
+.rewards .section-title {
+  max-width: 17ch;
+  line-height: 1.6;
+  letter-spacing: -2px;
+}
+
+.rewards .section-text { margin-block: 15px 25px; }
+
+.rewards-banner {
+  position:relative;
+  aspect-ratio: 1/0.86;
+}
+
+
+
+/*-----------------------------------*\
                 Blog
 \*-----------------------------------*/
 .blog { text-align: center; }
