@@ -291,8 +291,9 @@ body.active { overflow: hidden; }
 /*-----------------------------------*\
                 Header
 \*-----------------------------------*/
-.navbar,
-.header-btn-group .btn { display: none; }
+.header-btn-group .btn {
+  display: none;
+}
 
 .header {
   --color: var(--white);
@@ -311,11 +312,11 @@ body.active { overflow: hidden; }
   --color: var(--black);
   --btn-color: var(--black);
 
-  position: fixed;
-  top: -86px;
-  background-color: var(--white);
-  box-shadow: var(--shadow-1);
-  animation: slideIn 0.5s ease-out forwards;
+ position: fixed;
+ top: -86px;
+ background-color: var(--white);
+ box-shadow: var(--shadow-1);
+ animation: slideIn 0.5s ease-out forwards; 
 }
 
 @keyframes slideIn {
@@ -365,19 +366,19 @@ body.active { overflow: hidden; }
 
 .search-btn {
   color: var(--btn-color);
-  background-color: transparent;
   font-size: 20px;
+  background-color: transparent;
   border: none;
 }
 
-.search-btn ion-icon { --ionicon-stroke-width:50px; }
+.search-btn ion-icon { --ionicon-stroke-width: 50px }
 
 .nav-toggle-btn {
   display: grid;
   gap: 4px;
   border: none;
   background-color: transparent;
-}
+} 
 
 .line {
   width: 10px;
