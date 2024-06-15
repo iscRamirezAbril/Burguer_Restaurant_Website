@@ -81,7 +81,6 @@
 *::after {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
 li { list-style: none; }
@@ -1074,3 +1073,339 @@ body.active { overflow: hidden; }
 }
 
 .back-top-btn:is(:hover, :focus) { background-color: var(--rich-black-fogra-29); }
+
+/*-----------------------------------*\
+            Responsive Code
+\*-----------------------------------*/
+
+/**
+ * Responsive code for larger than 480px screens
+**/
+@media (min-width: 480px) {
+  /**
+    * Header
+  **/
+  .header-btn-group .btn {
+    display: block;
+    --bg-color: var(--dark-orange);
+  }
+}
+
+/**
+ * Responsive code for larger than 550px screens
+**/
+@media (min-width: 550px) {
+  /**
+    * Reused Style
+  **/
+  .container {
+    max-width: 550px;
+    width: 100%;
+    margin-inline: auto;
+  }
+
+  .has-scrollbar > li { min-width: calc(50% - 5px); }
+
+  /**
+  * Hero
+  **/
+  .hero-title { --fs-1: 4.2rem }
+
+  /**
+  * Footer
+  **/
+  .footer-top .container { grid-template-columns: 1fr 1fr; }
+}
+
+/**
+ * Responsive code for larger than 768px screens
+**/
+@media (min-width: 768px) {
+  /**
+    * Reused Style
+  **/
+  .container { max-width: 720px; }
+
+  /**
+  * Hero
+  **/
+  .hero {
+    position: relative;
+    text-align: left;
+    overflow: hidden;
+    z-index: 1;
+  }
+
+  .hero-content > :is(*, .btn) { margin-inline: 0; }
+
+  .hero-banner {
+    display: block;
+    position: absolute;
+    top: calc(50% + 86px);
+    transform: translateY(-50%);
+    right: 50px;
+    max-width: 40%;
+    aspect-ratio: 1 / 0.9;
+  }
+
+  .hero-img {
+    position: absolute;
+    bottom: 0;
+  }
+
+  .hero::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: -2px;
+    width: 100%;
+    height: 100%;
+    background-image: url("../images/hero-bg-shape.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right bottom;
+    pointer-events: none;
+    z-index: -1;
+  }
+
+  /**
+  * About
+  **/
+
+  .about .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+
+  .about { text-align: left; }
+
+  .about .section-title { margin-block-start: 0; }
+
+  .about :is(.section-title, .btn) { margin-inline: 0; }
+
+  .about-item { justify-content: flex-start; }
+
+  /**
+  * Food Menu
+  **/
+  .food-menu-list { grid-template-columns: 1fr 1fr; }
+
+  .food-menu-card :is(.wrapper, .price-wrapper) { justify-content: flex-start; }
+
+  .food-menu-card .card-title { text-align: left; }
+
+  /**
+  * CTA
+  **/
+  .cta .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .cta { text-align: left; }
+
+  .cta :is(.section-title, .btn) { margin-inline: 0; }
+
+  .cta-img { transform: scale(1.3) translate(90px, 20px); }
+
+  /**
+  * Rewards
+  **/
+  .rewards .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 50px;
+  }
+
+  /**
+  * Banner
+  **/
+  .banner-list { grid-template-columns: repeat(2, 1fr) }; 
+  
+  .banner-lg {
+    grid-column: 3 / 1;
+    grid-row: 1 / 1;
+  }
+
+  .banner-lg {
+    grid-column: 3 / 1;
+    grid-row: 1 / 1;
+    height: 100%
+  }
+
+  /**
+  * Blog
+  **/
+  .blog-list { grid-template-columns: 1fr 1fr; }
+
+  .blog-card { height: 100%; }
+  
+}
+
+/**
+ * Responsive code for larger than 992px screens
+**/
+@media (min-width: 992px) {
+/**
+ * Custom Property
+**/
+:root {
+  /**
+  * Spacing
+  **/
+  --section-padding: 120px
+}
+
+  /**
+  * Reused Style
+  **/
+  .container { max-width: 960px; }
+
+  .has-scrollbar > li { min-width: calc(33.3% - 6.66px); }
+
+  .h2 { --fs-1: 4.2rem }
+
+  /**
+  * Header
+  **/
+  .nav-toggle-btn { display: none; }
+
+  .header .container { gap: 20px; }
+
+  .navbar,
+  .navbar.active {
+    all: unset;
+    margin-inline-start: auto;
+  }
+
+  .navbar-list {
+    margin-block: 0;
+    display: flex;
+    gap: 5px;
+  }
+
+  .navbar-item:not(:last-child) { border-block-end: none; }
+
+  .navbar-link {
+    --fs-4: 1.5rem;
+    color: var(--btn-color);
+    letter-spacing: -0.5px;
+  }
+
+  /**
+  * Hero
+  **/
+  .hero {
+    min-height: 660px;
+    display: grid;
+    align-items: center;
+  }
+
+  .hero-title {
+    --fs-1: 7rem;
+    letter-spacing: -2.5px;
+  }
+
+  .hero-text { font-size: var(--fs-3); }
+
+  .hero-banner {
+    max-width: 45%;
+    top: auto;
+    bottom: 0;
+    transform: translateY(0);
+  }
+
+  .hero-img-bg { transform: scale(1.4) translate(20px, -20px); }
+
+  /**
+  * Food Menu
+  **/
+  .food-menu-list { grid-template-columns: repeat(3, 1fr); }
+
+  .food-menu-card { height: 80%; }
+
+  /**
+  * CTA
+  **/
+  .cta-img { transform: scale(1.4) translate(20px, 4px); }
+
+  .cta-banner .abs-img { left: -50px; }
+
+  :is(.cta, .rewards) .section-title { line-height: 1.2; }
+
+  /**
+  * Blog
+  **/
+  .blog-list { grid-template-columns: repeat(3, 1fr); }
+
+  .blog-card .card-title { --fs-3: 2.2rem }
+
+  /**
+  * Footer
+  **/
+  .footer-top .container { grid-template-columns: 1fr 1fr; }
+
+  /**
+  * Back to Top Button
+  **/
+  .back-top-btn {
+    bottom: 20px;
+    right: 30px;
+  }
+}
+
+/**
+ * Responsive code for larger than 1220px screens
+**/
+@media (min-width: 1220px) {
+/**
+* Reused Style
+**/
+.container { max-width: 1300px; }
+
+/**
+* Hero
+**/
+.hero { min-height: 770px; }
+
+/**
+* Promo
+**/
+.promo .promo-item { min-width: calc(25% - 7.5px); }
+
+/**
+* About
+**/
+.about .container { gap: 60px; }
+
+/**
+* CTA
+**/
+.cta { --section-padding: 60px }
+
+.cta .section-title { max-width: 18ch; }
+
+.cta-img { width: 500px; }
+
+/**
+* Banner
+**/
+.banner-list { grid-template-columns: repeat(2, 1fr) }; 
+
+.banner-lg {
+  grid-column: 3 / 1;
+  height: 70%
+}
+
+.banner-sm {
+  height: 100%;
+}
+
+.banner-md {
+  display: none;
+}
+}
