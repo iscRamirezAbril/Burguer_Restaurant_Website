@@ -658,29 +658,6 @@ body.active { overflow: hidden; }
   margin-block-end: 30px;
 }
 
-.filter-list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 10px;
-  margin-block-end: 40px;
-}
-
-.filter-btn {
-  background-color: var(--white);
-  color: var(--color, var(--rich-black-fogra-29));
-  font-family: var(--ff-rubik);
-  font-weight: var(--fw-500);
-  padding: 10px 20px;
-  border: 1px solid var(--border-color, var(--cultured));
-}
-
-.filter-btn.active {
-  background-color: var(--deep-saffron);
-  --color: var(--white);
-  --border-color: var(var(--deep-saffron));
-}
-
 .food-menu-list {
   display: grid;
   gap: 30px;
@@ -698,7 +675,6 @@ body.active { overflow: hidden; }
   position: relative;
   padding-block-start: 15px;
   max-width: max-content;
-  aspect-ratio: 1/1;
   margin-inline: auto;
 }
 
@@ -769,7 +745,6 @@ body.active { overflow: hidden; }
 .cta {
   background-repeat: no-repeat;
   background-size: cover;
-  /* background-position: center; */
   text-align: center;
   overflow: hidden;
 }
